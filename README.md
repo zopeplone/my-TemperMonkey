@@ -1,35 +1,9 @@
-# my-chrome-extension
-
-This template should help get you started developing with Vue 3 in Vite.
-
-## Recommended IDE Setup
-
-[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur).
-
-## Customize configuration
-
-See [Vite Configuration Reference](https://vitejs.dev/config/).
-
-## Project Setup
-
-```sh
-pnpm install
-```
-
-### Compile and Hot-Reload for Development
-
-```sh
-pnpm dev
-```
-
-### Compile and Minify for Production
-
-```sh
-pnpm build
-```
-
-### Lint with [ESLint](https://eslint.org/)
-
-```sh
-pnpm lint
-```
+# MyTemperMonkey
+在腾讯mini考核环节中制作的油猴插件demo
+## 原理
+将用户书写的代码保存到chrome storage中，然后在content层每次初始化时，使用eval执行用户书写的代码
+### eval在浏览器插件中被禁用
+通过eval5库（一个只支持es5语法的JavaScript解释器）与babel，达到在浏览器插件中执行字符串代码的功能
+## 预览图如下
+![image](https://github.com/zopeplone/my-TemperMonkey/assets/115687693/e197bef9-1658-47b4-bdb3-d3a9498610c9)
+![image](https://github.com/zopeplone/my-TemperMonkey/assets/115687693/935b88f8-3f24-4fbb-86e9-5ed3b8d16860)
