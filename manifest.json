@@ -1,0 +1,28 @@
+{
+  "manifest_version": 3,
+  "name": "My TemperMonkey",
+  "version": "1.0",
+  "description": "My TemperMonkey",
+  "icons": {
+    "77": "AI.png"
+  },
+  "action": {
+    "default_icon": "AI.png",
+    "default_popup": "index.html"
+  },
+  "background": {
+    "service_worker": "src/background/service-worker.js"
+  },
+  "content_scripts": [
+    {
+      "js": [
+        "src/assets/umd.min.js",
+        "src/content/content.js"
+      ],
+      "matches":["https://*/*","http://*/*"]
+    }
+  ],
+  "permissions": [
+    "activeTab","storage"
+  ]
+}
